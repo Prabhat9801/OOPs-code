@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>750 Days Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh; /* Adjust the height of the container to fit the desired number of rows */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        width: 30px; /* Fixed width for each cell */
+        height: 20px; /* Fixed height for each cell */
+        border: 2px solid black;
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+            <tbody>
+                <!-- JavaScript will populate this section with 730 boxes -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tbody = document.querySelector("tbody");
+            let rows = Math.ceil(750 / 50); // Calculate number of rows based on 10 columns and 730 cells
+            let cols = 50; // Number of columns
+
+            for (let i = 0; i < rows; i++) {
+                const tr = document.createElement("tr");
+                for (let j = 0; j < cols; j++) {
+                    if (i * cols + j < 750) {
+                        const td = document.createElement("td");
+                        tr.appendChild(td);
+                    }
+                }
+                tbody.appendChild(tr);
+            }
+        });
+    </script>
+</body>
+</html>
