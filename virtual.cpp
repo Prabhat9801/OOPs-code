@@ -3,7 +3,7 @@
 using namespace std;
 class A{
     public:
-    void display(){
+    virtual void display(){
         cout<<"This is the Parent Class"<<endl;
 
     }

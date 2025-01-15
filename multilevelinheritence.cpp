@@ -10,14 +10,14 @@ class Car:public Vehicle{
     public:
     
     void display(){
-        Vehicle::display();
+        // Vehicle::display();
     cout<<"Car has the four wheel"<<endl;
     }
 };
 class Bus:public Car{
     public:
      void display(){
-        Car::display();
+        // Car::display();
     cout<<"Bus has the four wheel"<<endl;
     }
 };
