@@ -10,9 +10,11 @@ class Complex{
     Complex(int real,int img){
         this->real=real;
         this->img=img;
+        
     }
     void display(){
         cout<<"The Additiion of the Complex Number is : "<<real<<" + "<<"i"<<img<<endl;
+        cout<<endl;
     }
     Complex operator + (Complex &C){
         Complex ans;
